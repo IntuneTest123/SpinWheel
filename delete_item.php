@@ -10,3 +10,4 @@ if (isset($_POST['index']) && isset($_SESSION['items'])) {
     
     echo json_encode($_SESSION['items']);
 } 
+?>

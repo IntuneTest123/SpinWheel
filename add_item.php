@@ -9,3 +9,4 @@ if (isset($_POST['item'])) {
     $_SESSION['items'][] = $_POST['item'];
     echo json_encode($_SESSION['items']);
 } 
+?>
