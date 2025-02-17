@@ -112,7 +112,7 @@ function showWinner(winnerItem, winnerIndex) {
     
     // အနိုင်ရသူကို ဖျက်ပါမယ်
     $.ajax({
-        url: 'delete_item.php',
+        url: './delete_item.php',
         method: 'POST',
         data: { index: winnerIndex },
         success: function(response) {
@@ -131,7 +131,7 @@ function closeWinnerDialog() {
 // Items တွေကို server ကနေ ယူပါမယ်
 function loadItems() {
     $.ajax({
-        url: 'get_items.php',
+        url: './get_items.php',
         method: 'GET',
         success: function(response) {
             items = JSON.parse(response);
@@ -173,7 +173,7 @@ $(document).ready(function() {
         if (!newItem) return;
         
         $.ajax({
-            url: 'add_item.php',
+            url: './add_item.php',
             method: 'POST',
             data: { item: newItem },
             success: function(response) {
@@ -189,7 +189,7 @@ $(document).ready(function() {
         const index = $(this).data('index');
         
         $.ajax({
-            url: 'delete_item.php',
+            url: './delete_item.php',
             method: 'POST',
             data: { index: index },
             success: function(response) {
